@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 
 export const CourseSchema = new Schema({
   name: {
-    type: String, required: true, minLength: 5, regex: /[a-z]0-9/, lowercase: true
+    type: String, required: true, minLength: 5, validate: /^[a-z]{3}[0-9]{3}/, lowercase: true
   },
   description: { type: String },
   credits: { type: Number, min: 0 }
